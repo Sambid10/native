@@ -44,10 +44,7 @@ export default function LoginScreen() {
           handleValue={handleEmail}
           placeholder="Enter your email."
         />
-         <SocialInput
-          handleValue={handleEmail}
-          placeholder="Enter your email."
-        />
+        
         <SocialInput
           handleValue={handlePassword}
           placeholder="Enter your password."
