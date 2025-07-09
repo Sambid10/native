@@ -5,7 +5,6 @@ export default function SocialInput({
   placeholder,
   password = false,
   showicon = false,
-  handleValue,
 }: {
   placeholder: string;
   password?: boolean;
@@ -17,7 +16,6 @@ export default function SocialInput({
     <View style={styles.textinputcontainer}>
       <TextInput
         autoCapitalize="none"
-        onChangeText={text => handleValue(text)}
         secureTextEntry={password && !seePassword}
         placeholderTextColor={'gray'}
         style={styles.input}

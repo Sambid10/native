@@ -25,6 +25,7 @@ export default function TodoPage() {
   const handleToggle=(id:number,val:boolean)=>{
     settodos(todos.map((todo)=>todo.id === id ? {...todo ,isCompleted:val} : todo))
   }
+  
   const handleDelete=(id:number)=>{
     settodos(
         todos.filter((todo)=>todo.id !== id)
@@ -51,6 +52,6 @@ export const styles = StyleSheet.create({
     position: 'relative',
     flex: 1,
     padding:12,
-     backgroundColor: '#FAF7F3',
+    backgroundColor: '#FAF7F3',
   },
 });

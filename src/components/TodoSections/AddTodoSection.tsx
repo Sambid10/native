@@ -35,6 +35,8 @@ export default function AddTodoSection({
           <TouchableOpacity onPress={handleClick} style={styles.todoaddbtn}>
             <Text style={styles.todobtntext}>Add</Text>
           </TouchableOpacity>
+
+
         </View>
       </View>
     </TouchableWithoutFeedback>
@@ -45,13 +47,13 @@ const styles = StyleSheet.create({
   todoaddcontainer: {
     position: 'absolute',
     bottom: 12,
-    left:12,
+    left: 12,
     width: '100%',
   },
   todoaddcontainerwrapper: {
     display: 'flex',
     flexDirection: 'row',
-   gap:6,
+    gap: 6,
     alignItems: 'center',
   },
   textInput: {
@@ -70,7 +72,6 @@ const styles = StyleSheet.create({
   },
 
   todoaddbtn: {
- 
     backgroundColor: '#27548A',
     height: 54,
     borderRadius: 12,
