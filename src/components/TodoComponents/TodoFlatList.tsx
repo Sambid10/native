@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import { Todo } from '../../screens/TodoPage';
 import BouncyCheckbox from 'react-native-bouncy-checkbox';
+import { KeyboardAvoidingView } from 'react-native';
 export default function TodoListFlatList({
   todos,
   handleDelete,
@@ -36,21 +37,17 @@ export default function TodoListFlatList({
   };
   return (
     <>
-      <View style={styles.todolistcontainer}>
+    <KeyboardAvoidingView>
+        <View style={styles.todolistcontainer}>
         <FlatList
           data={todos}
           keyExtractor={item => item.id.toString()}
           ListHeaderComponent={
             <View>
-                <Text style={styles.maintitle}>Your Todos</Text>
-             
-              
+              <Text style={styles.maintitle}>Your Todos</Text>
             </View>
           }
-            ListFooterComponent={
-                <View style={styles.seperator}/>
-          }
-        
+          ListFooterComponent={<View style={styles.seperator} />}
           renderItem={({ item }) => (
             <>
               <View style={styles.container}>
@@ -120,6 +117,8 @@ export default function TodoListFlatList({
           )}
         />
       </View>
+    </KeyboardAvoidingView>
+      
     </>
   );
 }
@@ -145,7 +144,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'white',
     borderRadius: 12,
-    minHeight: 60,
+    minHeight: 50,
     borderWidth: 1,
     borderColor: '#242424',
   },
@@ -157,7 +156,7 @@ const styles = StyleSheet.create({
     paddingLeft: 40,
     alignItems: 'center',
     borderRadius: 12,
-    minHeight: 60,
+    minHeight: 50,
     borderWidth: 1,
     borderColor: '#242424',
     backgroundColor: '#f0fdf4',

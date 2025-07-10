@@ -12,6 +12,7 @@ export type Todo = {
 
 export default function TodoPage() {
   const [todos, settodos] = useState<Todo[]>([]);
+  
   const handleTodo = (val: string, id: number) => {
     const newtodo: Todo = {
       id: id,
@@ -44,6 +45,7 @@ export default function TodoPage() {
   useEffect(() => {
     console.log(todos);
   }, [todos, settodos]);
+
 
   return (
     <View style={styles.maincontainer}>
