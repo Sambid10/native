@@ -1,13 +1,19 @@
 import React from 'react';
 import { Image, View, StyleSheet, TouchableOpacity } from 'react-native';
+import SearchInput from '../TodoComponents/SearchInput';
 
 export default function HeaderSection() {
   return (
     <View style={styles.headercontainer}>
       <View style={styles.headercontainerwrapper}>
         <TouchableOpacity>
-            <Image style={styles.iconimg} source={require("../../assets/hamburger.png")}/>
+          <Image
+            style={styles.iconimg}
+            source={require('../../assets/hamburger.png')}
+          />
         </TouchableOpacity>
+        <SearchInput/>
+    
         <Image style={styles.img} source={require('../../assets/user.jpg')} />
       </View>
     </View>
@@ -16,29 +22,36 @@ export default function HeaderSection() {
 
 const styles = StyleSheet.create({
   headercontainerwrapper: {
-    display: 'flex',
-    position:"absolute",
-    top:0,
-    width:"100%",
     flexDirection: 'row',
     justifyContent: 'space-between',
-    height: 40,
-    alignItems:"center"
+    paddingLeft: 12,
+    paddingRight: 12,
+    alignItems: 'center',
+    width:"100%",
+    height:"100%",
+    backgroundColor: '#F9F3EF',
+       borderBottomWidth:StyleSheet.hairlineWidth,
+    borderTopColor:"gray"
   },
   headercontainer: {
-    height: 40,
+    display: 'flex',
+    position: 'absolute',
+    top: 0,
+    width: '100%',
+    height: 70,
+    flexDirection: 'row',
+    alignItems: 'center',
   },
-  iconimg:{
-    objectFit:"cover",
-    height:24,
-    width:24,
- 
+  iconimg: {
+    objectFit: 'cover',
+    height: 24,
+    width: 24,
   },
   img: {
     height: 42,
     width: 42,
     borderRadius: 99,
-       borderWidth:2,
-    borderColor:"black"
+    borderWidth: 2,
+    borderColor: 'black',
   },
 });

@@ -36,12 +36,21 @@ export default function TodoListFlatList({
   };
   return (
     <>
-      <Text style={styles.maintitle}>Your Todos</Text>
       <View style={styles.todolistcontainer}>
         <FlatList
-          scrollEnabled={false}
           data={todos}
           keyExtractor={item => item.id.toString()}
+          ListHeaderComponent={
+            <View>
+                <Text style={styles.maintitle}>Your Todos</Text>
+             
+              
+            </View>
+          }
+            ListFooterComponent={
+                <View style={styles.seperator}/>
+          }
+        
           renderItem={({ item }) => (
             <>
               <View style={styles.container}>
@@ -123,7 +132,7 @@ const styles = StyleSheet.create({
   maintitle: {
     fontSize: 30,
     fontWeight: '500',
-    marginBottom: 18,
+    marginBottom: 12,
     marginTop: 12,
   },
 

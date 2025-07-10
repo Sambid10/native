@@ -1,8 +1,8 @@
 import { StyleSheet, View } from 'react-native';
-import HeaderSection from '../../components/HeaderSection/HeaderSection';
-import AddTodoSection from '../../components/TodoSections/AddTodoSection';
 import MainTodoSection from '../../components/MainTodoSection';
 import { useEffect, useState } from 'react';
+import HeaderSection from '../../components/HeaderSection/HeaderSection';
+import AddTodoSection from '../../components/TodoSections/AddTodoSection';
 
 export type Todo = {
   id: number;
@@ -18,8 +18,7 @@ export default function TodoPage() {
       tododesc: val,
       isCompleted: false,
     };
-    newtodo ? settodos([...todos, newtodo]) : null
-   ;
+    newtodo ? settodos([...todos, newtodo]) : null;
   };
 
   const handleToggle = (id: number, val: boolean) => {
@@ -34,9 +33,13 @@ export default function TodoPage() {
     settodos(todos.filter(todo => todo.id !== id));
   };
 
-  const handleEdit=(id:number,updateddesc:string)=>{
-    settodos(todos.map((todo)=>todo.id === id ? {...todo,tododesc:updateddesc} : todo))
-  }
+  const handleEdit = (id: number, updateddesc: string) => {
+    settodos(
+      todos.map(todo =>
+        todo.id === id ? { ...todo, tododesc: updateddesc } : todo,
+      ),
+    );
+  };
 
   useEffect(() => {
     console.log(todos);
@@ -60,7 +63,6 @@ export const styles = StyleSheet.create({
   maincontainer: {
     position: 'relative',
     flex: 1,
-    padding: 12,
     backgroundColor: '#FAF7F3',
   },
 });

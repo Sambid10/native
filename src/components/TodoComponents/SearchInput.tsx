@@ -27,12 +27,12 @@ export default function SearchInput() {
 
 const styles = StyleSheet.create({
   textinputcontainer: {
-    width: '100%',
-    position: 'relative',
-    zIndex:0,
+    zIndex: 0,
+    width:"50%",
   },
   textInput: {
     borderWidth: 1,
+    position: 'relative',
     backgroundColor: 'white',
     borderRadius: 12,
     height: 45,
@@ -46,11 +46,11 @@ const styles = StyleSheet.create({
   iconcontainer: {
     position: 'absolute',
     left: 10,
-    zIndex:10,
-    top: '30%',
+    zIndex: 10,
+    top: '25%',
   },
   searchicon: {
-    height: 18,
-    width: 18,
+    height: 14,
+    width: 14,
   },
 });

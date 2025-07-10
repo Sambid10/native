@@ -1,6 +1,5 @@
 import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
-import SearchInput from '../TodoComponents/SearchInput';
+import { View, StyleSheet } from 'react-native';
 // import TodoList from '../TodoComponents/TodoList';
 import { Todo } from '../../screens/TodoPage';
 import TodoListFlatList from '../TodoComponents/TodoFlatList';
@@ -16,22 +15,23 @@ export default function MainTodoSection({
   handleEdit: (id: number, updateddesc:string) => void;
 }) {
   return (
-    <ScrollView style={styles.scrollviewcontainer}>
-      <SearchInput />
+    <View style={styles.scrollviewcontainer}>
       <TodoListFlatList
         todos={todos}
         handleDelete={handleDelete}
         handleToggle={handleToggle}
         handleEdit={handleEdit}
       />
-    </ScrollView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   scrollviewcontainer: {
-    marginTop: 12,
-    marginBottom: 70,
+    paddingLeft:12,
+    paddingRight:12,
+    paddingTop:70,
+    marginBottom: 80,
     position: 'relative', 
   },
   

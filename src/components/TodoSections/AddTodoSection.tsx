@@ -46,23 +46,31 @@ export default function AddTodoSection({
     </TouchableWithoutFeedback>
   );
 }
-
+// FAF7F3"
 const styles = StyleSheet.create({
   todoaddcontainer: {
     position: 'absolute',
-    bottom: 12,
-    left: 12,
-    width: '100%',
+    bottom: 0,
+    left: 0,
+    right:0,
+    padding:12,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    height: 80,
+    alignItems: 'center',
+    backgroundColor:"#F9F3EF",
+    borderTopWidth:StyleSheet.hairlineWidth,
+    borderTopColor:"gray"
   },
   todoaddcontainerwrapper: {
-    display: 'flex',
     flexDirection: 'row',
-    gap: 6,
-    alignItems: 'center',
+    display:"flex",
+    gap:8,
+    justifyContent:"space-between"
   },
   textInput: {
     borderWidth: 1,
-    width: '80%',
+    width:"80%",
     borderRadius: 12,
     borderColor: '#242424',
     height: 54,
@@ -79,7 +87,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#27548A',
     height: 54,
     borderRadius: 12,
-    width: '18%',
+    paddingRight:14,
+    paddingLeft:14,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
