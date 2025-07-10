@@ -7,6 +7,7 @@ import {
   View,
 } from 'react-native';
 import { Keyboard, TouchableWithoutFeedback } from 'react-native';
+
 export default function AddTodoSection({
   handleTodo,
 }: {
@@ -15,7 +16,9 @@ export default function AddTodoSection({
   const [eachtodo, seteachtodo] = useState<string>('');
   const inputRef = useRef<TextInput>(null);
   const handleClick = () => {
-    handleTodo(eachtodo, Math.random());
+    if (eachtodo){
+    handleTodo(eachtodo, Math.random());}
+    else null
     seteachtodo('');
     inputRef.current?.blur();
   };
@@ -32,7 +35,8 @@ export default function AddTodoSection({
             ref={inputRef}
           />
 
-          <TouchableOpacity onPress={handleClick} style={styles.todoaddbtn}>
+          <TouchableOpacity 
+          onPress={handleClick} style={styles.todoaddbtn}>
             <Text style={styles.todobtntext}>Add</Text>
           </TouchableOpacity>
 
