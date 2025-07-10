@@ -1,8 +1,9 @@
 import React from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 import SearchInput from '../TodoComponents/SearchInput';
-import TodoList from '../TodoComponents/TodoList';
+// import TodoList from '../TodoComponents/TodoList';
 import { Todo } from '../../screens/TodoPage';
+import TodoListFlatList from '../TodoComponents/TodoFlatList';
 export default function MainTodoSection({
   todos,
   handleDelete,
@@ -17,7 +18,7 @@ export default function MainTodoSection({
   return (
     <ScrollView style={styles.scrollviewcontainer}>
       <SearchInput />
-      <TodoList
+      <TodoListFlatList
         todos={todos}
         handleDelete={handleDelete}
         handleToggle={handleToggle}
