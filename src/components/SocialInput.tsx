@@ -19,7 +19,6 @@ export default function SocialInput({
         secureTextEntry={password && !seePassword}
         placeholderTextColor={'gray'}
         style={styles.input}
-
         placeholder={placeholder}
       />
       {showicon && (
@@ -68,3 +67,5 @@ const styles = StyleSheet.create({
     right: 10,
   },
 });
+
+
