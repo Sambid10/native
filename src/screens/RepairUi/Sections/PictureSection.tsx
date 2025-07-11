@@ -1,7 +1,6 @@
-
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import { Text, View, StyleSheet,Image,FlatList } from 'react-native';
+import { Text, View, StyleSheet, Image, FlatList } from 'react-native';
 
 const itemData = [
   {
@@ -47,28 +46,26 @@ const itemData = [
 ];
 export default function PictureSection() {
   return (
-      <View style={styles.choosecontainer}>
-                <FlatList
-                  data={itemData}
-                  renderItem={({ item }) => (
-                    <>
-                      <View
-                        style={[styles.gridstyle, { backgroundColor: item.color }]}
-                      >
-                        {item.icon}
-                        <Text style={{ fontSize: 12, fontWeight: '200' }}>
-                          {item.title}
-                        </Text>
-                      </View>
-                      <View style={{ width: 6 }} />
-                    </>
-                  )}
-                  keyExtractor={item => item.title}
-                  numColumns={4}
-                  scrollEnabled={false}
-                />
-              </View>
-  )
+    <View style={styles.choosecontainer}>
+      <FlatList
+        data={itemData}
+        renderItem={({ item }) => (
+          <>
+            <View style={[styles.gridstyle, { backgroundColor: item.color }]}>
+              {item.icon}
+              <Text style={{ fontSize: 12, fontWeight: '200' }}>
+                {item.title}
+              </Text>
+            </View>
+            <View style={{ width: 6 }} />
+          </>
+        )}
+        keyExtractor={item => item.title}
+        numColumns={4}
+        scrollEnabled={false}
+      />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({

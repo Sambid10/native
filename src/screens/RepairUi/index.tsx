@@ -8,9 +8,9 @@ import {
   View,
   TouchableOpacity,
 } from 'react-native';
-import CommentSection from './components/CommentSection';
-import EmplyoeeSection from './components/EmplyoeeSection';
-import PictureSection from './components/PictureSection';
+import CommentSection from './Sections/CommentSection';
+import EmplyoeeSection from './Sections/EmplyoeeSection';
+import PictureSection from './Sections/PictureSection';
 
 export default function RepairUi() {
   const { width, height } = useWindowDimensions();
@@ -47,14 +47,15 @@ export default function RepairUi() {
         </View>
 
         <View style={styles.maincontentcontainer}>
-          {/* picture container ko */}
+          {/* picture section ko */}
           <PictureSection />
 
-          {/* comment container ko */}
+          {/* comment section ko */}
           <CommentSection />
 
-          {/* Emolyoee section */}
+          {/* Emolyoee section ko*/}
           <EmplyoeeSection />
+          
         </View>
       </View>
 
@@ -96,23 +97,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#c9cbcc',
   },
-  choosecontainer: {
-    marginTop: 60,
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: '#c9cbcc',
-    padding: 8,
-  },
-  gridstyle: {
-    flex: 1,
-    maxWidth: '25%',
-    alignItems: 'center',
-    padding: 10,
-    borderRadius: 12,
-    gap: 4,
-    borderWidth: StyleSheet.hairlineWidth,
-    borderColor: '#c9cbcc',
-  },
+
   absolutebottombtn: {
     position: 'absolute',
     bottom: 20,
