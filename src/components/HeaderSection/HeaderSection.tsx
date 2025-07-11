@@ -12,8 +12,8 @@ export default function HeaderSection() {
             source={require('../../assets/hamburger.png')}
           />
         </TouchableOpacity>
-        <SearchInput/>
-    
+        <SearchInput />
+
         <Image style={styles.img} source={require('../../assets/user.jpg')} />
       </View>
     </View>
@@ -27,11 +27,11 @@ const styles = StyleSheet.create({
     paddingLeft: 12,
     paddingRight: 12,
     alignItems: 'center',
-    width:"100%",
-    height:"100%",
+    width: '100%',
+    height: '100%',
     backgroundColor: '#F9F3EF',
-       borderBottomWidth:StyleSheet.hairlineWidth,
-    borderTopColor:"gray"
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderTopColor: 'gray',
   },
   headercontainer: {
     display: 'flex',
